@@ -376,5 +376,9 @@ const users = [
 ];
 
 export default function handler(req, res) {
-  res.status(200).json(users)
+  const {page} = req.query;
+  if (page)
+   res.status(200).json(users.slice((page - 1) * 10, page * 10))
+  else
+   res.status(200).json(users.slice(0, 10))
 }
