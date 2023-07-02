@@ -10,6 +10,7 @@ const UserRow = (user) => {
   </div>
 }
 
+// http://localhost:3000/api/users
 export default function Home() {
   return (
     <main className={styles.main}>
